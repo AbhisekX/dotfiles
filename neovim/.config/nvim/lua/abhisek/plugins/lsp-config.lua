@@ -156,7 +156,7 @@ return {
             }
 
             lsp.format_mapping("<leader>a", format_opts)
-            lsp.format_on_save(format_opts)
+            -- lsp.format_on_save(format_opts)
 
             -- (Optional) Configure lua language server for neovim
             require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
@@ -192,9 +192,5 @@ return {
     },
 
     -- Fidget.nvim
-    {
-        "j-hui/fidget.nvim",
-        event = { "BufReadPost" },
-        opts = {},
-    },
+    {},
 }

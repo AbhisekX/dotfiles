@@ -5,8 +5,7 @@ return {
     priority = 1000,
     config = function(_, opts)
         require("catppuccin").setup(opts)
-
-        -- vim.cmd.colorscheme("catppuccin")
+        vim.cmd.colorscheme("catppuccin")
     end,
     opts = {
         flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -38,8 +37,31 @@ return {
             types = {},
             operators = {},
         },
-        color_overrides = {},
-        custom_highlights = {},
+        color_overrides = {
+            mocha = {
+                base = "#1f1f2a",
+            },
+        },
+        custom_highlights = function(colors)
+            return {
+                -- Editor
+                LineNr = { fg = colors.surface2 },
+                CursorLineNr = { fg = colors.peach, bold = true },
+
+                -- Telescope.nvim
+                TelescopePromptTitle = { fg = colors.mantle, bg = colors.red, bold = true },
+                TelescopePromptNormal = { bg = colors.surface0 },
+                TelescopePromptBorder = { fg = colors.surface0, bg = colors.surface0 },
+
+                TelescopeResultsTitle = { fg = colors.mantle, bg = colors.mantle },
+                TelescopeResultsNormal = { bg = colors.mantle },
+                TelescopeResultsBorder = { fg = colors.mantle, bg = colors.mantle },
+
+                TelescopePreviewTitle = { fg = colors.mantle, bg = colors.blue, bold = true },
+                TelescopePreviewNormal = { bg = colors.crust },
+                TelescopePreviewBorder = { fg = colors.crust, bg = colors.crust },
+            }
+        end,
         integrations = {
             alpha = true,
             bufferline = true,

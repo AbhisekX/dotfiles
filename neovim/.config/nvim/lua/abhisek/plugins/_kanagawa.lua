@@ -5,7 +5,7 @@ return {
     config = function(_, opts)
         require("kanagawa").setup(opts)
 
-        vim.cmd.colorscheme("kanagawa")
+        -- vim.cmd.colorscheme("kanagawa")
     end,
     opts = {
         compile = true,
