@@ -1,2 +1,2 @@
-require("abhisek.core")
-require("abhisek.lazy-config")
+require("core")
+require("lazy-config")

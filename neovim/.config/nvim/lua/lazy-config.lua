@@ -15,5 +15,5 @@ vim.opt.rtp:prepend(lazypath)
 
 local status_ok, lazy = pcall(require, "lazy")
 if status_ok then
-    lazy.setup("abhisek/plugins")
+    lazy.setup("plugins")
 end
